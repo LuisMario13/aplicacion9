@@ -32,14 +32,14 @@ navigator.geolocation.getCurrentPosition(Localiza,ErrorLocalizacion);
 	function Correcto(acceleration){
 		var element=document.getElementById('acelerometro');
 		
-		alement.innerHTML='Aceleración en X:'+acceleration.x+'<br/>'+
+		element.innerHTML='Aceleración en X:'+acceleration.x+'<br/>'+
 		'Aceleración en Y:'+acceleration.y+'<br/>'+ 
 		'Intervalo:'+acceleration.timestamp+'<br/>';
 	}
 	
 	//eRROR:FALLA al obtener la aceleracion
 	function Error(){
-		alert('Error');
+		alert('Error!');
 	}
 	//Exito al localizar
 	function Localiza(posicion){
@@ -52,7 +52,7 @@ navigator.geolocation.getCurrentPosition(Localiza,ErrorLocalizacion);
 	//Error en la geolocalizacion
 	function ErrorLocalizacion(error){
 		alert('codigo:'+error.code+'\n'+
-		'Mensaje:'+error.message+'\n');
+		'mensaje:'+error.message+'\n');
 	}
 });//document ready
 	
